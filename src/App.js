@@ -1,7 +1,7 @@
 import {BrowserRouter, Routes, Route} from "react-router-dom";
-import Navbar from "./components/Navbar/Navbar";
-import Hero from "./components/Hero/Hero";
-import SubNav from "./components/SubNav/SubNav";
+import Navbar from "./Components/Navbar/Navbar";
+import SubNav from "./Components/SubNav/SubNav";
+import Hero from "./Components/Hero/Hero";
 
 function App() {
   return (
