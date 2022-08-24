@@ -1,0 +1,81 @@
+#footer{
+  width: 100%;
+  height: auto;
+  background: #000;
+  color: #fff;
+  .footer-wrapper{
+    max-width: 1230px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 20px;
+    margin: 0 auto;
+    padding: 30px 0;
+    .left{
+      .contact{
+        .title{
+          h2{
+            font-size: 24px;
+            font-weight: 400;
+          }
+        }
+        .mail{
+          p{
+            margin-top: 5px;
+            font-size: 14px;
+          }
+          .g-mail{
+          color: rgb(235, 120, 39);
+          }
+        }
+        .phone{
+          margin-top: 15px;
+          font-size: 14px;
+        }
+      }
+    }
+    .center{
+      .clients{
+        h2{
+          font-size: 24px;
+          font-weight: 400;
+        }
+      }
+      .bars{
+        margin-top: 20px;
+        ul{
+        list-style-type: none;
+          li{
+            margin: 10px 0;
+            cursor: pointer;
+            &:hover{
+              color: rgb(235, 120, 39);
+            }
+          }
+        }
+      }
+    }
+    .right{
+      .adress{
+        .title{
+          h2{
+            font-size: 24px;
+            font-weight: 400;
+          }
+        }
+        p{
+          margin-top: 20px;
+          max-width: 200px;
+        }
+      }
+    }
+  }
+  .copyright{
+    max-width: 100%;
+    margin: 0 auto;
+    border-top: 1px solid #ddd;
+    text-align: center;
+    p{
+      padding: 15px 0;
+    }
+  }
+}
