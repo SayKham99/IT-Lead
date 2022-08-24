@@ -77,6 +77,12 @@ export default function SingleItem(){
                             <div className="item-describtion">
                                 <p>Piston type portable air compressor is designed to inflate the wheels of cars, motorcycles, bicycles, balls and mattresses. Increased engine power, as well as an efficient cooling system, can reduce the pumping time by up to 20%. The built-in battery allows the pump to be used without mains power supply. One charge is enough to inflate up to eight bicycle tires, forty footballs, six motorcycle wheels and up to five car wheels 17 with a radius of 2.0 to 2.5 bar.</p>
                             </div>
+                            <div className="pricing">
+                                <h4>11 200 000  sum</h4>
+                            </div>
+                            <div className="buy">
+                                <button>Buy</button>
+                            </div>
                         </div>
                     </div>
                 </div>
