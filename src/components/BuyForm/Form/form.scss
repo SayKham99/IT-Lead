@@ -1,0 +1,48 @@
+.form {
+  margin: 0 auto;
+  width: 100%;
+  background-color: lightgrey;
+  .wrapper {
+    margin: 0 auto;
+    width: 1170px;
+    padding: 0 15px;
+    border-radius: 10px;
+    background-color: #fff;
+    .address {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      padding: 20px;
+      .inputGroup {
+        display: flex;
+        justify-content: center;
+        align-items:flex-start;
+        flex-direction: column;
+        flex-wrap: wrap;
+        .input{
+          height: 35px;
+          border: 1px solid darkgray;
+          border-radius: 5px;
+        }
+        label{
+          font-size: 14px;
+        }
+        &:first-child{
+          .input{
+            width: 1100px;
+          }
+          label{
+          }
+        }
+        &:nth-child(-n+5 ){
+          .input{
+            width: 1100px;
+          }
+          label{
+          }
+        }
+      }
+    }
+  }
+}
