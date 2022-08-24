@@ -1,7 +1,10 @@
 import {BrowserRouter, Routes, Route} from "react-router-dom";
-import Navbar from "./Components/Navbar/Navbar";
-import SubNav from "./Components/SubNav/SubNav";
-import Hero from "./Components/Hero/Hero";
+import Navbar from "./components/Navbar/Navbar";
+import Hero from "./components/Hero/Hero";
+import SubNav from "./components/SubNav/SubNav";
+import Products from "./components/Products/Products";
+import Footer from "./components/Footer/Footer";
+import SingleItem from "./components/SingleProduct/SingleProduct";
 
 function App() {
   return (
@@ -10,7 +13,10 @@ function App() {
           <SubNav />
         <Routes>
             <Route path="/" exact element={<Hero />} />
+            <Route path="products" element={<Products />} />
+            <Route path="item" element={<SingleItem />}/>
         </Routes>
+          <Footer />
       </BrowserRouter>
   );
 }
