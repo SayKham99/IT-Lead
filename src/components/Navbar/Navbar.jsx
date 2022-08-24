@@ -1,4 +1,4 @@
-import {useState} from "react";
+import {useState, useEffect} from "react";
 import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
 import TelegramIcon from '@mui/icons-material/Telegram';
 import MailIcon from '@mui/icons-material/Mail';
@@ -29,6 +29,19 @@ export default function Navbar(){
     const changeOpenMenu = () => {
         setOpen(open ? false : true);
     }
+
+    const [sticky, setSticky] = useState(false);
+
+    const changePosiiton = function(){
+        if(window.scrollY <= 500)
+            return  setSticky(true) ;
+        else
+            return  setSticky(false);
+    }
+
+    useEffect(() => {
+        changePosiiton();
+    }, []);
 
     return(
         <section id="navbar">
@@ -76,12 +89,8 @@ export default function Navbar(){
                             </div>
                             <div className="footer-price">
                                 <div className="price-wrapper">
-                                    <p>
-                                        All
-                                    </p>
-                                    <p>
-                                        500, 000 sum
-                                    </p>
+                                    <p>All</p>
+                                    <p>500, 000 sum</p>
                                 </div>
                                 <div className="buy-price">
                                     <CallMissedOutgoingIcon />
