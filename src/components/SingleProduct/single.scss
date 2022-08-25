@@ -1,0 +1,173 @@
+#single-item{
+  width: 100%;
+  .single-wrapper{
+    max-width: 1230px;
+    margin: 0 auto;
+
+    .file-nest{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      margin-top: 20px;
+      .home-icon{
+        margin-right: 10px;
+        color: rgb(235, 120, 39);
+        font-size: 18px;
+        cursor: pointer;&:hover{
+        opacity: .9;
+      }
+      }
+      .category{
+        margin-right: 10px;
+        color: rgb(235, 120, 39);
+        font-size: 14px;
+        &:hover{
+          opacity: .9;
+        }
+      }
+      p{
+        margin-right: 10px;
+        font-size: 14px;
+        cursor: pointer;
+        color: #333
+      }
+    }
+    .item-body{
+      .item-title{
+        margin: 20px;
+        h2{
+          font-size: 24px;
+        }
+      }
+      .item-desc{
+        display: flex;
+        flex-direction: row;
+        padding: 50px 0;
+        @media(max-width: 730px){
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+        //align-items: center;
+        justify-content: space-between;
+        .item-left{
+          max-width: 500px;
+          margin: 0 auto;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          .phone1{
+            max-width: 150px;
+            img{
+              max-width: 150px;
+              object-fit: contain;
+            }
+          }
+        }
+        .item-right{
+          max-width: 500px;
+          margin: 0 auto;
+          @media(max-width: 730px){
+            padding: 0 10px;
+          }
+          .pricing{
+            margin-top: 50px;
+            h4{
+              font-size: 45px;
+              font-weight: 500;
+              @media(max-width: 730px){
+                font-size: 32px;
+              }
+            }
+          }
+          .item-describtion{
+            p{
+              font-size: 16px;
+              color: #333;
+              line-height: 19px;
+              @media(max-width: 730px){
+                padding: 0 10px;
+                font-size: 14px;
+              }
+            }
+          }
+          .buy{
+            margin-top: 40px;
+            max-width: 150px;
+
+            button{
+              background: rgb(235, 120, 39);
+              padding: 1rem 3rem;
+              font-size: 20px;
+              color: white;
+              font-weight: 500;
+              border: none;
+              border-radius: 5px;
+              &:hover{
+                opacity: 0.9;
+                cursor: pointer;
+              }
+            }
+          }
+        }
+        .device-color{
+          max-width: 400px;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          margin-top: 20px;
+          .color3 {
+            margin-left: 10px;
+            width: 20px;
+            height: 20px;
+            border: .4px solid rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+          }
+          .color1{
+            background: #bf0000;
+            margin-left: 10px;
+            width: 20px;
+            height: 20px;
+            border: .4px solid rgba(0, 0, 0, 0.5);
+            cursor: pointer;
+          }
+          .color2{
+            background: blue;
+            margin-left: 10px;
+            width: 20px;
+            height: 20px;
+            border: .4px solid rgba(0, 0, 0, 0.5);
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+
+  .categ-buttons{
+    max-width: 1230px;
+    margin: 50px auto;
+    @media(max-width: 460px) {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+     #button{
+       margin-left: 40px;
+       border: none;
+       font-size: 20px;
+       line-height: 22px;
+       font-weight: 500;
+       padding: 1.5rem 3rem;
+       cursor: pointer;
+       @media(max-width: 460px) {
+         padding: .5rem 1rem;
+         font-size: 18px;
+         font-weight: 400;
+         margin-left: 20px;
+       }
+     }
+  }
+
+}
