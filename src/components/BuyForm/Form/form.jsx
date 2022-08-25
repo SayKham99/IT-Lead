@@ -1,36 +1,66 @@
 import React from 'react'
 import './form.scss'
+import {useForm} from 'react-hook-form'
+
+
 function Form() {
+    const {register, handleSubmit, formState: {errors}, watch, reset} = useForm();
+
+    const onSubmit = (data) => {
+        console.log(data)
+        reset();
+    }
+
     return (<section className='form'>
-        <div className='wrapper'>
-            <form className='address'>
-                <div className='inputGroup'>
-                    <label htmlFor='fullname'>Имя Фамилия</label>
-                    <input className='input' type="text" id='fullname'/>
+        <form className='wrapper' onSubmit={handleSubmit(onSubmit)}>
+            <div className='address'>
+                <div className='inputg'>
+                    <label htmlFor="fullname">FullName</label>
+                    <input type="text" id='fullname' className='input'
+                           {...register('fullName', {required: true})}
+                    />
                 </div>
-                <div className='inputGroup'>
-                    <label htmlFor='Address'>Адрес</label>
-                    <input className='input' type="text" id='Address'/>
+                <div className='inputg'>
+                    <label htmlFor="address">Address</label>
+                    <input type="text" id='addrres' className='input'
+                           {...register('address', {required: true})}
+                    />
                 </div>
-                <div className='inputGroup'>
-                    <label htmlFor='home'>Дом</label>
-                    <input className='input' type="text" id='home'/>
+                <div className='inputg'>
+                    <label htmlFor="home">Home</label>
+                    <input type="text" id='home' className='input'
+                           {...register('home', {required: true})}
+                    />
                 </div>
-                <div className='inputGroup'>
-                    <label htmlFor='number'>Квартира</label>
-                    <input className='input' type="text" id='number'/>
+                <div className='inputg'>
+                    <label htmlFor="room">Room</label>
+                    <input type="text" id='room' className='input'
+                           {...register('room', {required: true})}
+                    />
                 </div>
-                <div className='inputGroup'>
-                    <label htmlFor='phoneNumber'>Телефон</label>
-                    <input className='input' type="tel" id='phoneNumber'/>
+                <div className='inputg'>
+                    <label htmlFor="phone">Phone Number</label>
+                    <input type="tel" id='phone' className='input'
+                           {...register('phone', {required: true})}
+                    />
                 </div>
-                <div className='inputGroup'>
-                    <label htmlFor='email'>E-Mail</label>
-                    <input className='input' type="email" id='email'/>
+                <div className='inputg'>
+                    <label htmlFor="email">E-Mail</label>
+                    <input type="email" id='room' className='input'
+                           {...register('room', {required: true})}
+                    />
                 </div>
-            </form>
-            <div className='comment'></div>
-        </div>
+            </div>
+            <div className='comment'>
+                <div className='text'>
+                    <label htmlFor='commit'>Comment</label>
+                    <textarea id='commit' className='commits'
+                              {...register('commit', {required: true})}
+                    ></textarea>
+                </div>
+                <button type="submit" className='submit'>Submit Buying</button>
+            </div>
+        </form>
     </section>)
 }
 

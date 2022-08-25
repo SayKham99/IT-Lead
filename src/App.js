@@ -12,9 +12,14 @@ import Scroll from "./scroll";
 function App() {
   return (
       <BrowserRouter>
+<<<<<<< HEAD
           <Navbar />
           <SubNav />
           <Scroll />
+=======
+          {/*<Navbar />*/}
+          {/*<SubNav />*/}
+>>>>>>> d6aa2bdc663e381597da60f0d1d6644e1bfd121c
         <Routes>
             <Route path="/" exact element={<Home />} />
             <Route path="products" element={<Products />} />
@@ -24,7 +29,7 @@ function App() {
                 <Route path="character" element={<Character />} />
             </Route>
         </Routes>
-          <Footer />
+          {/*<Footer />*/}
       </BrowserRouter>
   );
 }

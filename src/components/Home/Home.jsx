@@ -8,16 +8,16 @@ import './home.scss'
 function Home() {
   return (
     <section className='home'>
-        <Carousel/>
+        {/*<Carousel/>*/}
         <h1>ПРОДУКЦИЯ XIAOMI</h1>
         <hr />
         <Category/>
         <h2>НОВИНКИ XIAOMI</h2>
         <hr />
-        <New/>
+        {/*<New/>*/}
         <h2>НОВИНКИ XIAOMI</h2>
         <hr />
-        <HomeAbout/>
+        {/*<HomeAbout/>*/}
     </section>
   )
 }
