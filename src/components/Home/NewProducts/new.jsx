@@ -1,5 +1,5 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom'
+import {NavLink} from 'react-router-dom'
 import Poco from '../../../assets/pocobanner-min.jpg'
 import Amazfit from '../../../assets/amazfit-t-rex-2-min.jpg'
 import Air from '../../../assets/air2.jpg'
@@ -10,67 +10,34 @@ import Holder from '../../../assets/20w.jpg'
 import Compressor from '../../../assets/mi-air-compressor.jpeg'
 import Dermast from '../../../assets/deermast-800-min.jpg'
 import './new.scss'
+
+const newProd = [
+    {id: 1, name: 'Poco X3', url: Poco},
+    {id: 2, name: 'Amazfit T-Rex', url: Amazfit},
+    {id: 3, name: 'Mi Air 2', url: Air},
+    {id: 4, name: 'Roborock S5 Max', url: Robo},
+    {id: 5, name: 'Haylou GT-2', url: Haylou},
+    {id: 6, name: 'Mi Smart Band 5', url: Smart},
+    {id: 7, name: 'Mi Auto Wireless Charger 20W', url: Holder},
+    {id: 8, name: 'Mi Air Compressor', url: Compressor},
+    {id: 9, name: 'Deerma ST800', url: Dermast},
+]
+
 function New() {
-  return (
-    <section className='newproduct'>
-        <div className="wrapper">
-            <NavLink to={'/'}>
-                <div className='item'>
-                    <img src={Poco} alt="" />
-                    <p>Poco X3</p>
-                </div>
-            </NavLink>
-            <NavLink to={'/'}>
-                <div className='item'>
-                    <img src={Amazfit} alt="" />
-                    <p>Amazfit T-Rex</p>
-                </div>
-            </NavLink>
-            <NavLink to={'/'}>
-                <div className='item'>
-                    <img src={Air} alt="" />
-                    <p>Mi Air 2</p>
-                </div>
-            </NavLink>
-            <NavLink to={'/'}>
-                <div className='item'>
-                    <img src={Robo} alt="" />
-                    <p>Roborock S5 Max</p>
-                </div>
-            </NavLink>
-            <NavLink to={'/'}>
-                <div className='item'>
-                    <img src={Haylou} alt="" />
-                    <p>Haylou GT-2</p>
-                </div>
-            </NavLink>
-            <NavLink to={'/'}>
-                <div className='item'>
-                    <img src={Smart} alt="" />
-                    <p>Mi Smart Band 5</p>
-                </div>
-            </NavLink>
-            <NavLink to={'/'}>
-                <div className='item'>
-                    <img src={Holder} alt="" />
-                    <p>Mi Auto Wireless Charger 20W</p>
-                </div>
-            </NavLink>
-            <NavLink to={'/'}>
-                <div className='item'>
-                    <img src={Compressor} alt="" />
-                    <p>Mi Air Compressor</p>
-                </div>
-            </NavLink>
-            <NavLink to={'/'}>
-                <div className='item'>
-                    <img src={Dermast} alt="" />
-                    <p>Deerma ST800</p>
-                </div>
-            </NavLink>
-        </div>
-    </section>
-  )
+    return (
+          <section className='newproduct'>
+              <div className="wrapper">
+                  {newProd.map((type) => (
+                      <NavLink to={'/'} key={type.id}>
+                          <div className='item'>
+                              <img src={type.url} alt=""/>
+                              <p>{type.name}</p>
+                          </div>
+                      </NavLink>
+                  ))}
+              </div>
+          </section>
+    )
 }
 
 export default New

@@ -3,15 +3,18 @@
   width: 100%;
   .wrapper {
     margin: 0 auto;
-    width: 1140px;
+    max-width: 1140px;
     background-image: linear-gradient(rgba(255, 255, 255, 0.52), rgba(255, 255, 255, 0.52)), url('../../../assets/fonhome.jpg') ;
     background-attachment: fixed;
     overflow: hidden;
 
     .details {
+      margin: 0 auto;
+      width: 100%;
       display: flex;
       justify-content: center;
       align-items: center;
+      flex-wrap: wrap;
 
       .descr {
         width: 550px;
@@ -67,7 +70,7 @@
               border-radius: 15px;
               margin-bottom: 15px;
 
-              .icons {
+              #icons {
                 height: 45px;
                 font-size: 40px;
                 color: orange;

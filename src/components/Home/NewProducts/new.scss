@@ -1,26 +1,32 @@
 .newproduct {
-    margin: 0 auto;
-    max-width: 1170px;
-    .wrapper {
-        margin: 0 auto;
-        width: 1110px;
-        display: grid;
-        grid-template-columns: repeat(3, 370px);
-        grid-template-rows: repeat(3, 208px);
-        .item {
-            position: relative;
-            img {
-                width: 100%;
-            }
-            p{
-                position: absolute;
-                bottom: 15px;
-                left: 10px;
-                font-size: 15px;
-                font-weight: 500;
-                color: white;
-                mix-blend-mode: difference;
-            }
-        }
+  margin: 0 auto;
+  max-width: 1170px;
+  padding: 0 15px;
+
+  .wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    .item {
+      height: 190px;
+      position: relative;
+
+      img {
+        width: 340px;
+      }
+
+      p {
+        position: absolute;
+        bottom: 5%;
+        left: 5%;
+        font-size: 1.2rem;
+        font-weight: 500;
+        color: white;
+        mix-blend-mode: difference;
+      }
     }
+  }
 }
