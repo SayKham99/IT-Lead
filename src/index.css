@@ -10,3 +10,8 @@ body{
 a{
     text-decoration: none;
 }
+.active{
+    background: black;
+    color: rgb(235, 120, 39);
+}
+

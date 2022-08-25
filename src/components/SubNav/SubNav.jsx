@@ -1,6 +1,11 @@
 import Img1 from "../../assets/Apple-iPhone-12-PNG-Transparent-Picture.png";
+import {Link} from "react-router-dom";
 import "./subnav.scss";
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
+import SmartphoneIcon from '@mui/icons-material/Smartphone';
+import LaptopIcon from '@mui/icons-material/Laptop';
+import CameraAltIcon from '@mui/icons-material/CameraAlt';
+import HeadphonesIcon from '@mui/icons-material/Headphones';
 export default function SubNav(){
 
     const data = [
@@ -17,7 +22,8 @@ export default function SubNav(){
             price1: '11, 120,000',
             price2: "8, 549,300",
             price3: "7, 500,000",
-            price4: "5, 300, 250"
+            price4: "5, 300, 250",
+            icon: <SmartphoneIcon />
         },
         {
             name: "Laptops",
@@ -32,7 +38,8 @@ export default function SubNav(){
             price1: '14, 120,000',
             price2: "14, 549,300",
             price3: "12, 500,000",
-            price4: "20, 300, 250"
+            price4: "20, 300, 250",
+            icon: <LaptopIcon />
         },
         {
             name: "Cameras",
@@ -47,7 +54,8 @@ export default function SubNav(){
             price1: '11, 120,000',
             price2: "8, 549,300",
             price3: "7, 500,000",
-            price4: "5, 300, 250"
+            price4: "5, 300, 250",
+            icon: <CameraAltIcon />
         },
         {
             name: "Accessuars",
@@ -62,7 +70,8 @@ export default function SubNav(){
             price1: '210, 120',
             price2: "1, 549,300",
             price3: "7, 500,000",
-            price4: "5, 300, 250"
+            price4: "5, 300, 250",
+            icon: <HeadphonesIcon />
         },
 
     ];
@@ -74,7 +83,12 @@ export default function SubNav(){
                     {data.map(item =>
                         <li className="item">
                                 <div className="dropdown">
-                                    <button className="dropbtn">{item.name}</button>
+                                    <button className="dropbtn">
+                                        <span className="icons">
+                                            {item.icon}
+                                        </span>
+                                        {item.name}
+                                    </button>
                                     <div className="dropdown-content">
                                         <div className="content-wrapper">
                                             <div className="content-cart">
@@ -122,15 +136,24 @@ export default function SubNav(){
                                                 </div>
                                             </div>
                                             <div className="content-cart">
+                                                <Link to="/products">
                                                 <button className="links">
                                                     <KeyboardArrowRightIcon className="link"/>
                                                 </button>
+                                                </Link>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                         </li>
                     )}
+                    <li className="item">
+                        <div className="all-products">
+                            <Link to="products">
+                                <button>All Products</button>
+                            </Link>
+                        </div>
+                    </li>
                 </ul>
             </div>
         </section>

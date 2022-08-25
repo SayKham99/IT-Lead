@@ -2,10 +2,11 @@ import {useState} from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { FreeMode, Navigation, Thumbs } from "swiper";
 import "./single.scss"
-import {Link} from "react-router-dom";
+import {NavLink,Link, Outlet} from "react-router-dom";
 import HomeIcon from "@mui/icons-material/Home";
 import iPhone from "../../assets/Apple-iPhone-12-PNG-Photo.png"
-import iPhone1 from "../../assets/Apple-iPhone-11-PNG-HD.png"
+import iPhone1 from "../../assets/Apple-iPhone-11-PNG-HD.png";
+import Description from "./Description"
 import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/navigation";
@@ -46,7 +47,7 @@ export default function SingleItem(){
                                 className="mySwiper2"
                             >
                                 <div className="phone1">
-                                <SwiperSlide style={{maxWidth: "350px"}}>
+                                <SwiperSlide style={{maxWidth: "350px", margin: "20px 0"}}>
                                     <img src={iPhone }style={{maxWidth: "280px"}}/>
                                 </SwiperSlide>
                                 <SwiperSlide style={{maxWidth: "350px"}}>
@@ -77,6 +78,11 @@ export default function SingleItem(){
                             <div className="item-describtion">
                                 <p>Piston type portable air compressor is designed to inflate the wheels of cars, motorcycles, bicycles, balls and mattresses. Increased engine power, as well as an efficient cooling system, can reduce the pumping time by up to 20%. The built-in battery allows the pump to be used without mains power supply. One charge is enough to inflate up to eight bicycle tires, forty footballs, six motorcycle wheels and up to five car wheels 17 with a radius of 2.0 to 2.5 bar.</p>
                             </div>
+                            <div className="device-color">
+                                <div className="color1"></div>
+                                <div className="color2"></div>
+                                <div className="color3"></div>
+                            </div>
                             <div className="pricing">
                                 <h4>11 200 000  sum</h4>
                             </div>
@@ -85,6 +91,19 @@ export default function SingleItem(){
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+            <div className="categ-buttons">
+                <NavLink to="description" id="button" activeClass="active">
+                Description
+                </NavLink>
+                <NavLink to="character" id="button" activeClass="active">
+                Character
+                </NavLink>
+            </div>
+            <div className="character-desc">
+                <div className="character-wrapper">
+                    <Outlet />
                 </div>
             </div>
         </section>
