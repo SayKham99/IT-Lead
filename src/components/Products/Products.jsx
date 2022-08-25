@@ -94,9 +94,11 @@ export default function Products(){
                     <div className="product-items">
                         {data.map(item =>
                             <div className="product-item">
+                                <Link to="/item">
                                 <div className="product-img">
                                     <img src={item.img} />
                                 </div>
+                                </Link>
                                 <div className="product-name">
                                     <h4>{item.name}</h4>
                                 </div>

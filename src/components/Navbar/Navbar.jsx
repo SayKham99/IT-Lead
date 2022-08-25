@@ -1,4 +1,5 @@
 import {useState, useEffect} from "react";
+import {Link} from "react-router-dom";
 import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
 import TelegramIcon from '@mui/icons-material/Telegram';
 import MailIcon from '@mui/icons-material/Mail';
@@ -47,7 +48,9 @@ export default function Navbar(){
         <section id="navbar">
             <div className="nav-wrapper">
             <div className="logo">
+                <Link to="/">
                 <h2>Logo Here</h2>
+                </Link>
             </div>
             <div className={open ? "openMenu" : "info"}>
                 <p><span> <LocalPhoneIcon style={{fontSize: "16px"}}/> </span> +998999883500</p>
@@ -70,6 +73,7 @@ export default function Navbar(){
                             </IconButton>
                         </button>
                         <div className="dropdown-content">
+                            <Link to="/item">
                             <div className="cart-items">
                                 <div className="single-item">
                                     <div className="imgage-wrapper">
@@ -87,6 +91,7 @@ export default function Navbar(){
                                     </div>
                                 </div>
                             </div>
+                            </Link>
                             <div className="footer-price">
                                 <div className="price-wrapper">
                                     <p>All</p>

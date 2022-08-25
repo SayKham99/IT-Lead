@@ -8,6 +8,7 @@
     white-space: nowrap;
     scrollbar-width: none;
     -ms-overflow-style: none;
+    height: 5rem;
     &::-webkit-scrollbar {
       width: 0px;
     }
@@ -25,6 +26,19 @@
       list-style-type: none;
       .item{
         margin: 20px 10px;
+        .all-products{
+          button{
+            border: none;
+            background: transparent;
+            font-size: 18px;
+            padding: 0 10px;
+            cursor: pointer;
+            z-index: 1;
+            &:hover{
+              background-color: #ccc;
+            }
+          }
+        }
         .dropdown {
           position: relative;
           display: inline-block;
@@ -77,11 +91,22 @@
         }
         .dropbtn{
           border: none;
-          background: #ddd;
+          background: transparent;
           font-size: 18px;
           border-right: 1px solid rgba(0, 0, 0, 0.5);
           padding: 0 10px;
           cursor: pointer;
+          z-index: 1;
+          .icons{
+            //display: none;
+            display: none;
+            @media(max-width: 999px){
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              font-size: 16px;
+            }
+          }
         }
         .dropdown-content {
           display: none;
@@ -89,7 +114,7 @@
           margin: 0 auto;
           background-color: #f1f1f1;
           box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-          z-index: 1;
+          z-index: 1000;
           .content-wrapper{
             display: flex;
           }
