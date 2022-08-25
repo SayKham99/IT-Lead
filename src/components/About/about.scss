@@ -1,0 +1,135 @@
+.Main {
+  max-width: 1665px;
+  height: 100%;
+  margin: 0 auto;
+
+  .AboutDiv {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    .titleAbout {
+      color: rgb(71, 71, 71);
+      font-weight: 400;
+      font-size: 28px;
+    }
+    .LogoMi {
+      padding: 0 0.6rem;
+      width: 100%;
+      margin-top: 1rem;
+    }
+  }
+
+  .Logotype {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    padding: 20px 0;
+
+    .titleXiaomi {
+      margin-bottom: 20px;
+      font-size: 30px;
+      font-weight: 400;
+      color: rgb(45, 42, 42);
+    }
+    .title1 {
+      margin-bottom: 20px;
+      font-size: 18px;
+    }
+    .title2 {
+      margin-bottom: 20px;
+      font-size: 18px;
+    }
+    .title3 {
+      margin-bottom: 20px;
+      font-size: 18px;
+    }
+    .title4 {
+      margin-bottom: 20px;
+      font-size: 18px;
+    }
+  }
+
+  .SpaceDiv {
+    margin-top: 1rem2;
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    width: auto;
+    min-height: 190px;
+    background: url(../../assets/cosmos.png);
+    @media screen and (max-width: "455px") {
+      flex-direction: column;
+      // border: 1px solid red;
+    }
+    .SpaceImg {
+      width: 100%;
+    }
+    .calendarDiv {
+      .calendar {
+        font-size: 35px;
+      }
+      color: white;
+      font-size: 35px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .titleCl {
+        font-size: 13px;
+        margin-top: 20px;
+      }
+    }
+    .starDiv {
+      .star {
+        font-size: 35px;
+      }
+      color: white !important;
+      font-size: 35px;
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+
+      .titleStr {
+        font-size: 13px;
+        margin-top: 20px;
+      }
+    }
+    .wrenchDiv {
+      .wrench {
+        font-size: 35px;
+      }
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      color: white !important;
+      font-size: 35px;
+      align-items: center;
+
+      .titleWr {
+        font-size: 13px;
+        margin-top: 20px;
+      }
+    }
+  }
+  .WorkTable {
+    margin-top: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 10px;
+    .grafikWork {
+      font-size: 28px;
+      color: #333;
+    }
+    .workDay {
+      font-size: 18px;
+    }
+  }
+}

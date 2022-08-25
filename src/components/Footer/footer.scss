@@ -1,84 +1,153 @@
-#footer{
-  width: 100%;
-  height: auto;
-  background: #000;
-  color: #fff;
-  .footer-wrapper{
-    max-width: 1230px;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    grid-gap: 20px;
-    margin: 0 auto;
-    padding: 30px 0;
-    @media(max-width: 600px){
-      padding: 30px 20px;
+.FooterDiv {
+  max-width: 1665px;
+  padding: 0 20px;
+  margin: 0 auto;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  background-color: #202020;
+  padding-top: 20px;
+  height: 200px;
+  @media screen and (max-width: "850px") {
+    padding-bottom: 15px;
+    flex-direction: column;
+    height: auto;
+    gap: 40px;
+    align-items: center;
+    justify-content: center;
+  }
+  .emailFooter {
+    color: #ff6709;
+    cursor: pointer;
+    font-size: 13px;
+    width: 182px;
+    &:hover {
+      text-decoration: underline;
     }
-    .left{
-      .contact{
-        .title{
-          h2{
-            font-size: 24px;
-            font-weight: 400;
-          }
-        }
-        .mail{
-          p{
-            margin-top: 5px;
-            font-size: 14px;
-          }
-          .g-mail{
-          color: rgb(235, 120, 39);
-          }
-        }
-        .phone{
-          margin-top: 15px;
-          font-size: 14px;
-        }
-      }
+    @media screen and (max-width: "850px") {
+      margin-left: 1.2rem;
     }
-    .center{
-      .clients{
-        h2{
-          font-size: 24px;
-          font-weight: 400;
-        }
-      }
-      .bars{
-        margin-top: 20px;
-        ul{
-        list-style-type: none;
-          li{
-            margin: 10px 0;
-            cursor: pointer;
-            &:hover{
-              color: rgb(235, 120, 39);
-            }
-          }
-        }
-      }
+  }
+  .topTitle {
+    font-size: 19px;
+    font-weight: 400;
+    color: white;
+    @media screen and (max-width: "850px") {
+      text-align: center;
     }
-    .right{
-      .adress{
-        .title{
-          h2{
-            font-size: 24px;
-            font-weight: 400;
-          }
-        }
-        p{
-          margin-top: 20px;
-          max-width: 200px;
+  }
+  .titleWrite {
+    font-size: 13px;
+    color: white;
+  }
+  .titleCall {
+    font-size: 13px;
+    color: white;
+  }
+  .titleAddress {
+    font-size: 13px;
+    color: white;
+  }
+  .Contact {
+    line-height: 25px;
+
+    .phoneNm {
+      display: flex;
+      justify-content: space-between;
+      font-size: 13px;
+      .phn1 {
+        display: flex;
+        align-items: center;
+        font-size: 13px;
+        color: #ff6709;
+        cursor: pointer;
+        font-weight: 200;
+        &:hover {
+          text-decoration: underline;
         }
       }
     }
   }
-  .copyright{
-    max-width: 100%;
-    margin: 0 auto;
-    border-top: 1px solid #ddd;
-    text-align: center;
-    p{
-      padding: 15px 0;
+  .Clinet {
+    @media screen and (max-width: "850px") {
+      align-items: center;
+    }
+    display: flex;
+    flex-direction: column;
+    height: 115px;
+    justify-content: space-between;
+    .topTitle {
+      font-size: 13px;
+      color: white;
+    }
+    .titleAbout {
+      font-size: 13px;
+      width: 37px;
+      height: 15px;
+      color: white;
+      cursor: pointer;
+
+      &:hover {
+        color: #ff6709 !important;
+        text-decoration: underline;
+      }
+    }
+    .titleGurantee {
+      font-size: 13px;
+      width: 58px;
+      height: 15px;
+      color: white;
+      cursor: pointer;
+      &:hover {
+        color: #ff6709 !important;
+        text-decoration: underline;
+      }
+    }
+    .titleCheck {
+      width: 146px;
+      height: 15px;
+      display: flex;
+      align-items: center;
+      font-size: 13px;
+      color: white;
+      cursor: pointer;
+      &:hover {
+        color: #ff6709 !important;
+        text-decoration: underline;
+      }
+    }
+  }
+  .Address {
+    @media screen and (max-width: "850px") {
+      text-align: center;
+    }
+    line-height: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    .titleAddress {
+      @media screen and (max-width: "850px") {
+        position: relative;
+      }
+      position: relative;
+      margin-top: 0.5rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .locIcon {
+        @media screen and (max-width: "850px") {
+          margin-bottom: 1.7rem;
+          position: relative;
+          top: 0px;
+          left: 0px;
+        }
+        position: absolute;
+        top: 3px;
+        left: -20px;
+        font-size: 17px;
+        color: #ff6709;
+      }
     }
   }
 }
