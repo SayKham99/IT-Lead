@@ -91,6 +91,7 @@ export default function SubNav(){
                                     </button>
                                     <div className="dropdown-content">
                                         <div className="content-wrapper">
+                                            <Link to="/item">
                                             <div className="content-cart">
                                                 <div className="content-img">
                                                     <img src={item.img1} />
@@ -102,6 +103,8 @@ export default function SubNav(){
                                                     <p>{item.price1}</p>
                                                 </div>
                                             </div>
+                                            </Link>
+                                            <Link to="/item">
                                             <div className="content-cart">
                                                 <div className="content-img">
                                                     <img src={item.img2} />
@@ -113,6 +116,8 @@ export default function SubNav(){
                                                     <p>{item.price2}</p>
                                                 </div>
                                             </div>
+                                            </Link>
+                                            <Link to="/item">
                                             <div className="content-cart">
                                                 <div className="content-img">
                                                     <img src={item.img3} />
@@ -124,6 +129,7 @@ export default function SubNav(){
                                                     <p>{item.price3}</p>
                                                 </div>
                                             </div>
+                                            </Link>
                                             <div className="content-cart">
                                                 <div className="content-img">
                                                     <img src={item.img4} />
