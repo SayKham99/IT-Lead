@@ -6,8 +6,10 @@ import SmartphoneIcon from '@mui/icons-material/Smartphone';
 import LaptopIcon from '@mui/icons-material/Laptop';
 import CameraAltIcon from '@mui/icons-material/CameraAlt';
 import HeadphonesIcon from '@mui/icons-material/Headphones';
-export default function SubNav(){
 
+
+
+export default function SubNav() {
     const data = [
         {
             name: "Smartphones",
@@ -23,7 +25,7 @@ export default function SubNav(){
             price2: "8, 549,300",
             price3: "7, 500,000",
             price4: "5, 300, 250",
-            icon: <SmartphoneIcon />
+            icon: <SmartphoneIcon/>
         },
         {
             name: "Laptops",
@@ -39,7 +41,7 @@ export default function SubNav(){
             price2: "14, 549,300",
             price3: "12, 500,000",
             price4: "20, 300, 250",
-            icon: <LaptopIcon />
+            icon: <LaptopIcon/>
         },
         {
             name: "Cameras",
@@ -55,7 +57,7 @@ export default function SubNav(){
             price2: "8, 549,300",
             price3: "7, 500,000",
             price4: "5, 300, 250",
-            icon: <CameraAltIcon />
+            icon: <CameraAltIcon/>
         },
         {
             name: "Accessuars",
@@ -71,17 +73,17 @@ export default function SubNav(){
             price2: "1, 549,300",
             price3: "7, 500,000",
             price4: "5, 300, 250",
-            icon: <HeadphonesIcon />
+            icon: <HeadphonesIcon/>
         },
 
     ];
 
-    return(
-        <section id="subnav">
-            <div className="subnav-wrapper">
-                <ul className="items">
-                    {data.map(item =>
-                        <li className="item">
+    return (
+          <section id="subnav">
+              <div className="subnav-wrapper">
+                  <ul className="items">
+                      {data.map(item =>
+                            <li className="item">
                                 <div className="dropdown">
                                     <button className="dropbtn">
                                         <span className="icons">
@@ -92,47 +94,47 @@ export default function SubNav(){
                                     <div className="dropdown-content">
                                         <div className="content-wrapper">
                                             <Link to="/item">
-                                            <div className="content-cart">
-                                                <div className="content-img">
-                                                    <img src={item.img1} />
+                                                <div className="content-cart">
+                                                    <div className="content-img">
+                                                        <img src={item.img1}/>
+                                                    </div>
+                                                    <div className="content-title">
+                                                        <h2>{item.title1}</h2>
+                                                    </div>
+                                                    <div className="pricing">
+                                                        <p>{item.price1}</p>
+                                                    </div>
                                                 </div>
-                                                <div className="content-title">
-                                                    <h2>{item.title1}</h2>
-                                                </div>
-                                                <div className="pricing">
-                                                    <p>{item.price1}</p>
-                                                </div>
-                                            </div>
                                             </Link>
                                             <Link to="/item">
-                                            <div className="content-cart">
-                                                <div className="content-img">
-                                                    <img src={item.img2} />
+                                                <div className="content-cart">
+                                                    <div className="content-img">
+                                                        <img src={item.img2}/>
+                                                    </div>
+                                                    <div className="content-title">
+                                                        <h2>{item.title2}</h2>
+                                                    </div>
+                                                    <div className="pricing">
+                                                        <p>{item.price2}</p>
+                                                    </div>
                                                 </div>
-                                                <div className="content-title">
-                                                    <h2>{item.title2}</h2>
-                                                </div>
-                                                <div className="pricing">
-                                                    <p>{item.price2}</p>
-                                                </div>
-                                            </div>
                                             </Link>
                                             <Link to="/item">
-                                            <div className="content-cart">
-                                                <div className="content-img">
-                                                    <img src={item.img3} />
+                                                <div className="content-cart">
+                                                    <div className="content-img">
+                                                        <img src={item.img3}/>
+                                                    </div>
+                                                    <div className="content-title">
+                                                        <h2>{item.title3}</h2>
+                                                    </div>
+                                                    <div className="pricing">
+                                                        <p>{item.price3}</p>
+                                                    </div>
                                                 </div>
-                                                <div className="content-title">
-                                                    <h2>{item.title3}</h2>
-                                                </div>
-                                                <div className="pricing">
-                                                    <p>{item.price3}</p>
-                                                </div>
-                                            </div>
                                             </Link>
                                             <div className="content-cart">
                                                 <div className="content-img">
-                                                    <img src={item.img4} />
+                                                    <img src={item.img4}/>
                                                 </div>
                                                 <div className="content-title">
                                                     <h2>{item.title4}</h2>
@@ -143,25 +145,25 @@ export default function SubNav(){
                                             </div>
                                             <div className="content-cart">
                                                 <Link to="/products">
-                                                <button className="links">
-                                                    <KeyboardArrowRightIcon className="link"/>
-                                                </button>
+                                                    <button className="links">
+                                                        <KeyboardArrowRightIcon className="link"/>
+                                                    </button>
                                                 </Link>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                        </li>
-                    )}
-                    <li className="item">
-                        <div className="all-products">
-                            <Link to="products">
-                                <button>All Products</button>
-                            </Link>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </section>
+                            </li>
+                      )}
+                      <li className="item">
+                          <div className="all-products">
+                              <Link to="all">
+                                  <button>All Products</button>
+                              </Link>
+                          </div>
+                      </li>
+                  </ul>
+              </div>
+          </section>
     )
 }
