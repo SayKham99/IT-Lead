@@ -1,16 +1,16 @@
 import {BrowserRouter, Routes, Route} from "react-router-dom";
-import Navbar from "./Components/Navbar/Navbar";
-import SubNav from "./Components/SubNav/SubNav";
+import Navbar from "./components/Navbar/Navbar";
+import SubNav from "./components/SubNav/SubNav";
 import Scroll from "./scroll";
-import Home from "./Components/Home/Home";
-import Products from "./Components/Products/Products";
-import SingleItem from "./Components/SingleProduct/SingleProduct";
-import Description from "./Components/SingleProduct/Description";
-import Character from "./Components/SingleProduct/Character";
-import Footer from "./Components/Footer/Footer";
-import About from "./Components/About/About";
-import Gurantee from "./Components/Gurantee/Gurantee";
-
+import Home from "./components/Home/Home";
+import Products from "./components/Products/Products";
+import SingleItem from "./components/SingleProduct/SingleProduct";
+import Description from "./components/SingleProduct/Description";
+import Character from "./components/SingleProduct/Character";
+import Footer from "./components/Footer/Footer";
+import About from "./components/About/About";
+import Gurantee from "./components/Gurantee/Gurantee";
+import Form from "./components/BuyForm/Form/form";
 
 function App() {
   return (
@@ -25,6 +25,7 @@ function App() {
                 <Route index element={<Description />} />
                 <Route path="description" element={<Description />}/>
                 <Route path="character" element={<Character />} />
+                <Route path="forms" element={<Form />} />
             </Route>
             <Route path='about' element={ <About/> } />
             <Route path='garant' element={ <Gurantee/> } />

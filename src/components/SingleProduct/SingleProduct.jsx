@@ -14,18 +14,22 @@ import "swiper/css/thumbs";
 
 export default function SingleItem(){
     const [thumbsSwiper, setThumbsSwiper] = useState(null);
+
+    const pathname = window.location.pathname
+    console.log(pathname);
     return(
         <section id="single-item">
             <div className="single-wrapper">
                 <div className="file-nest">
                     <Link to="/">
                         <HomeIcon className="home-icon"/>
-                    </Link>/
-                    <Link to="/products">
-                        <p className="category">All Products</p>
-                    </Link>/
-                    <p className="products">Smartphones</p>
-                    / <p>I phone 13 Pro</p>
+                    </Link>
+                    {/*<Link to="/products">*/}
+                    {/*    <p className="category">All Products</p>*/}
+                    {/*</Link>/*/}
+                    {/*<p className="products">Smartphones</p>*/}
+                    {/*/ <p>I phone 13 Pro</p>*/}
+                    <p>{pathname}</p>
                 </div>
                 <div className="item-body">
                     <div className="item-title">
@@ -87,7 +91,9 @@ export default function SingleItem(){
                                 <h4>11 200 000  sum</h4>
                             </div>
                             <div className="buy">
+                                <Link to="forms">
                                 <button>Buy</button>
+                                </Link>
                             </div>
                         </div>
                     </div>
