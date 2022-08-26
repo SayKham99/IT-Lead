@@ -7,6 +7,7 @@ import Footer from "./components/Footer/Footer";
 import SingleItem from "./components/SingleProduct/SingleProduct";
 import Description from "./components/SingleProduct/Description";
 import Character from "./components/SingleProduct/Character";
+import Form from "./components/BuyForm/Form/form";
 import Scroll from "./scroll";
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
                 <Route index element={<Description />} />
                 <Route path="description" element={<Description />}/>
                 <Route path="character" element={<Character />} />
+                <Route path="forms" element={<Form />} />
             </Route>
         </Routes>
           <Footer />
