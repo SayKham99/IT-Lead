@@ -12,6 +12,7 @@ import About from "./components/About/About";
 import Gurantee from "./components/Gurantee/Gurantee";
 import Form from "./components/BuyForm/Form/form";
 import {useGetProductsQuery} from "./Redux";
+import Loader from "./components/Loader/Loader";
 
 function App() {
     const {data = [], isLoading} = useGetProductsQuery();
