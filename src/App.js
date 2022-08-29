@@ -16,7 +16,6 @@ import Loader from "./components/Loader/Loader";
 
 function App() {
     const {data = [], isLoading} = useGetProductsQuery();
-    console.log(data)
     return (<BrowserRouter>
               <Navbar/>
               <SubNav/>

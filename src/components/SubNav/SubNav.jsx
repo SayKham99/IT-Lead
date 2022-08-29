@@ -1,85 +1,301 @@
-import Img1 from "../../assets/Apple-iPhone-12-PNG-Transparent-Picture.png";
-import {Link} from "react-router-dom";
+import {NavLink} from "react-router-dom";
 import "./subnav.scss";
-import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
-import SmartphoneIcon from '@mui/icons-material/Smartphone';
-import LaptopIcon from '@mui/icons-material/Laptop';
-import CameraAltIcon from '@mui/icons-material/CameraAlt';
-import HeadphonesIcon from '@mui/icons-material/Headphones';
+import Arrow from '../../assets/icons/arrow-right.svg'
 
+const data = [{
+    id: 1, title: 'Smartfonlar', products: [{
+        id: 1,
+        name: 'Iphone XS Max',
+        price: '400$',
+        img: 'https://mi-store.uz/image/cache/catalog/smart/xiaomimi10lite5g/2-260x260.jpg'
+    }, {
+        id: 2,
+        name: 'Iphone XS Max',
+        price: '400$',
+        img: 'https://mi-store.uz/image/cache/catalog/smart/xiaomimi10lite5g/2-260x260.jpg'
+    }, {
+        id: 3,
+        name: 'Iphone XS Max',
+        price: '400$',
+        img: 'https://mi-store.uz/image/cache/catalog/smart/xiaomimi10lite5g/2-260x260.jpg'
+    }, {
+        id: 4,
+        name: 'Iphone XS Max',
+        price: '400$',
+        img: 'https://mi-store.uz/image/cache/catalog/smart/xiaomimi10lite5g/2-260x260.jpg'
+    }, {
+        id: 5,
+        name: 'Iphone XS Max',
+        price: '400$',
+        img: 'https://mi-store.uz/image/cache/catalog/smart/xiaomimi10lite5g/2-260x260.jpg'
+    }, {
+        id: 6,
+        name: 'Iphone XS Max',
+        price: '400$',
+        img: 'https://mi-store.uz/image/cache/catalog/smart/xiaomimi10lite5g/2-260x260.jpg'
+    }, {
+        id: 7,
+        name: 'Iphone XS Max',
+        price: '400$',
+        img: 'https://mi-store.uz/image/cache/catalog/smart/xiaomimi10lite5g/2-260x260.jpg'
+    },]
+}, {
+    id: 2, title: 'Power Banklar', products: [{
+        id: 1,
+        name: 'Iphone XS Max',
+        price: '400$',
+        img: 'https://mi-store.uz/image/cache/catalog/smart/mi11lite/uvo0mfnntqjabv4am3wyrjkznpuxxsso0knslehl-260x260.jpg'
+    }, {
+        id: 2,
+        name: 'Iphone XS Max',
+        price: '400$',
+        img: 'https://mi-store.uz/image/cache/catalog/smart/xiaomimi10lite5g/2-260x260.jpg'
+    }, {
+        id: 3,
+        name: 'Iphone XS Max',
+        price: '400$',
+        img: 'https://mi-store.uz/image/cache/catalog/smart/xiaomimi10lite5g/2-260x260.jpg'
+    }, {
+        id: 4,
+        name: 'Iphone XS Max',
+        price: '400$',
+        img: 'https://mi-store.uz/image/cache/catalog/smart/xiaomimi10lite5g/2-260x260.jpg'
+    }, {
+        id: 5,
+        name: 'Iphone XS Max',
+        price: '400$',
+        img: 'https://mi-store.uz/image/cache/catalog/smart/xiaomimi10lite5g/2-260x260.jpg'
+    }, {
+        id: 6,
+        name: 'Iphone XS Max',
+        price: '400$',
+        img: 'https://mi-store.uz/image/cache/catalog/smart/xiaomimi10lite5g/2-260x260.jpg'
+    }, {
+        id: 7,
+        name: 'Iphone XS Max',
+        price: '400$',
+        img: 'https://mi-store.uz/image/cache/catalog/smart/xiaomimi10lite5g/2-260x260.jpg'
+    },]
+}, {
+    id: 3, title: 'Naushniklar', products: [{
+        id: 1,
+        name: 'Iphone XS Max',
+        price: '400$',
+        img: 'https://mi-store.uz/image/cache/catalog/smart/xiaomimi10lite5g/2-260x260.jpg'
+    }, {
+        id: 2,
+        name: 'Iphone XS Max',
+        price: '400$',
+        img: 'https://mi-store.uz/image/cache/catalog/smart/xiaomimi10lite5g/2-260x260.jpg'
+    }, {
+        id: 3,
+        name: 'Iphone XS Max',
+        price: '400$',
+        img: 'https://mi-store.uz/image/cache/catalog/smart/xiaomimi10lite5g/2-260x260.jpg'
+    }, {
+        id: 4,
+        name: 'Iphone XS Max',
+        price: '400$',
+        img: 'https://mi-store.uz/image/cache/catalog/smart/xiaomimi10lite5g/2-260x260.jpg'
+    }, {
+        id: 5,
+        name: 'Iphone XS Max',
+        price: '400$',
+        img: 'https://mi-store.uz/image/cache/catalog/smart/xiaomimi10lite5g/2-260x260.jpg'
+    }, {
+        id: 6,
+        name: 'Iphone XS Max',
+        price: '400$',
+        img: 'https://mi-store.uz/image/cache/catalog/smart/xiaomimi10lite5g/2-260x260.jpg'
+    }, {
+        id: 7,
+        name: 'Iphone XS Max',
+        price: '400$',
+        img: 'https://mi-store.uz/image/cache/catalog/smart/xiaomimi10lite5g/2-260x260.jpg'
+    },]
+}, {
+    id: 4, title: 'NoteBooklar', products: [{
+        id: 1,
+        name: 'Iphone XS Max',
+        price: '400$',
+        img: 'https://mi-store.uz/image/cache/catalog/smart/xiaomimi10lite5g/2-260x260.jpg'
+    }, {
+        id: 2,
+        name: 'Iphone XS Max',
+        price: '400$',
+        img: 'https://mi-store.uz/image/cache/catalog/smart/xiaomimi10lite5g/2-260x260.jpg'
+    }, {
+        id: 3,
+        name: 'Iphone XS Max',
+        price: '400$',
+        img: 'https://mi-store.uz/image/cache/catalog/smart/xiaomimi10lite5g/2-260x260.jpg'
+    }, {
+        id: 4,
+        name: 'Iphone XS Max',
+        price: '400$',
+        img: 'https://mi-store.uz/image/cache/catalog/smart/xiaomimi10lite5g/2-260x260.jpg'
+    }, {
+        id: 5,
+        name: 'Iphone XS Max',
+        price: '400$',
+        img: 'https://mi-store.uz/image/cache/catalog/smart/xiaomimi10lite5g/2-260x260.jpg'
+    }, {
+        id: 6,
+        name: 'Iphone XS Max',
+        price: '400$',
+        img: 'https://mi-store.uz/image/cache/catalog/smart/xiaomimi10lite5g/2-260x260.jpg'
+    }, {
+        id: 7,
+        name: 'Iphone XS Max',
+        price: '400$',
+        img: 'https://mi-store.uz/image/cache/catalog/smart/xiaomimi10lite5g/2-260x260.jpg'
+    },]
+}, {
+    id: 5, title: 'Birbalolar', products: [{
+        id: 1,
+        name: 'Iphone XS Max',
+        price: '400$',
+        img: 'https://mi-store.uz/image/cache/catalog/smart/xiaomimi10lite5g/2-260x260.jpg'
+    }, {
+        id: 2,
+        name: 'Iphone XS Max',
+        price: '400$',
+        img: 'https://mi-store.uz/image/cache/catalog/smart/xiaomimi10lite5g/2-260x260.jpg'
+    }, {
+        id: 3,
+        name: 'Iphone XS Max',
+        price: '400$',
+        img: 'https://mi-store.uz/image/cache/catalog/smart/xiaomimi10lite5g/2-260x260.jpg'
+    }, {
+        id: 4,
+        name: 'Iphone XS Max',
+        price: '400$',
+        img: 'https://mi-store.uz/image/cache/catalog/smart/xiaomimi10lite5g/2-260x260.jpg'
+    }, {
+        id: 5,
+        name: 'Iphone XS Max',
+        price: '400$',
+        img: 'https://mi-store.uz/image/cache/catalog/smart/xiaomimi10lite5g/2-260x260.jpg'
+    }, {
+        id: 6,
+        name: 'Iphone XS Max',
+        price: '400$',
+        img: 'https://mi-store.uz/image/cache/catalog/smart/xiaomimi10lite5g/2-260x260.jpg'
+    }, {
+        id: 7,
+        name: 'Iphone XS Max',
+        price: '400$',
+        img: 'https://mi-store.uz/image/cache/catalog/smart/xiaomimi10lite5g/2-260x260.jpg'
+    },]
+}, {
+    id: 6, title: 'Akksesuarlar', products: [{
+        id: 1,
+        name: 'Iphone XS Max',
+        price: '400$',
+        img: 'https://mi-store.uz/image/cache/catalog/smart/xiaomimi10lite5g/2-260x260.jpg'
+    }, {
+        id: 2,
+        name: 'Iphone XS Max',
+        price: '400$',
+        img: 'https://mi-store.uz/image/cache/catalog/smart/xiaomimi10lite5g/2-260x260.jpg'
+    }, {
+        id: 3,
+        name: 'Iphone XS Max',
+        price: '400$',
+        img: 'https://mi-store.uz/image/cache/catalog/smart/xiaomimi10lite5g/2-260x260.jpg'
+    }, {
+        id: 4,
+        name: 'Iphone XS Max',
+        price: '400$',
+        img: 'https://mi-store.uz/image/cache/catalog/smart/xiaomimi10lite5g/2-260x260.jpg'
+    }, {
+        id: 5,
+        name: 'Iphone XS Max',
+        price: '400$',
+        img: 'https://mi-store.uz/image/cache/catalog/smart/xiaomimi10lite5g/2-260x260.jpg'
+    }, {
+        id: 6,
+        name: 'Iphone XS Max',
+        price: '400$',
+        img: 'https://mi-store.uz/image/cache/catalog/smart/xiaomimi10lite5g/2-260x260.jpg'
+    }, {
+        id: 7,
+        name: 'Iphone XS Max',
+        price: '400$',
+        img: 'https://mi-store.uz/image/cache/catalog/smart/xiaomimi10lite5g/2-260x260.jpg'
+    },]
+}, {
+    id: 8, title: 'Hammasi', products: [{
+        id: 1,
+        name: 'Iphone XS Max',
+        price: '400$',
+        img: 'https://mi-store.uz/image/cache/catalog/smart/xiaomimi10lite5g/2-260x260.jpg'
+    }, {
+        id: 2,
+        name: 'Iphone XS Max',
+        price: '400$',
+        img: 'https://mi-store.uz/image/cache/catalog/smart/xiaomimi10lite5g/2-260x260.jpg'
+    }, {
+        id: 3,
+        name: 'Iphone XS Max',
+        price: '400$',
+        img: 'https://mi-store.uz/image/cache/catalog/smart/xiaomimi10lite5g/2-260x260.jpg'
+    }, {
+        id: 4,
+        name: 'Iphone XS Max',
+        price: '400$',
+        img: 'https://mi-store.uz/image/cache/catalog/smart/xiaomimi10lite5g/2-260x260.jpg'
+    }, {
+        id: 5,
+        name: 'Iphone XS Max',
+        price: '400$',
+        img: 'https://mi-store.uz/image/cache/catalog/smart/xiaomimi10lite5g/2-260x260.jpg'
+    }, {
+        id: 6,
+        name: 'Iphone XS Max',
+        price: '400$',
+        img: 'https://mi-store.uz/image/cache/catalog/smart/xiaomimi10lite5g/2-260x260.jpg'
+    }, {
+        id: 7,
+        name: 'Iphone XS Max',
+        price: '400$',
+        img: 'https://mi-store.uz/image/cache/catalog/smart/xiaomimi10lite5g/2-260x260.jpg'
+    },]
+},
 
+];
 
 export default function SubNav() {
-    const data = [
-        {
-            name: "Smartphones",
-            img1: require("../../assets/Apple-iPhone-12-PNG-Transparent-Picture.png"),
-            img2: require("../../assets/Apple-iPhone-11-PNG-Image.png"),
-            img3: require("../../assets/Apple-iPhone-11-PNG-HD.png"),
-            img4: require("../../assets/Apple-iPhone-12-PNG-Photo.png"),
-            title1: "I Phone 13",
-            title2: "I Phone 12 Pro",
-            title3: "I Phone 11",
-            title4: "I Phone 13 Pro",
-            price1: '11, 120,000',
-            price2: "8, 549,300",
-            price3: "7, 500,000",
-            price4: "5, 300, 250",
-            icon: <SmartphoneIcon/>
-        },
-        {
-            name: "Laptops",
-            img1: require("../../assets/Macbook-PNG-Pic.png"),
-            img2: require("../../assets/Macbook.png"),
-            img3: require("../../assets/Macbook (1).png"),
-            img4: require("../../assets/Unboxing MacBook Pro 13 pollici 2017 con Touch Bar.jpeg"),
-            title1: "Macbook Pro 13",
-            title2: "Macbook Pro 13",
-            title3: "Macbook Air",
-            title4: "Macbook Pro 15",
-            price1: '14, 120,000',
-            price2: "14, 549,300",
-            price3: "12, 500,000",
-            price4: "20, 300, 250",
-            icon: <LaptopIcon/>
-        },
-        {
-            name: "Cameras",
-            img1: require("../../assets/Nikon-Camera-PNG.png"),
-            img2: require("../../assets/Photo-Camera-PNG-File.png"),
-            img3: require("../../assets/Transparent-Camera-PNG.png"),
-            img4: require("../../assets/Camera-Icon-PNG.png"),
-            title1: "Nikon Camera",
-            title2: "Nicon Pro",
-            title3: "Nicon Ultra",
-            title4: "NiconPro",
-            price1: '11, 120,000',
-            price2: "8, 549,300",
-            price3: "7, 500,000",
-            price4: "5, 300, 250",
-            icon: <CameraAltIcon/>
-        },
-        {
-            name: "Accessuars",
-            img1: require("../../assets/pngegg.png"),
-            img2: require("../../assets/pngegg (1).png"),
-            img3: require("../../assets/Apple-iPhone-11-PNG-HD.png"),
-            img4: require("../../assets/Apple-iPhone-12-PNG-Photo.png"),
-            title1: "I Phone 13 charger",
-            title2: "Air Pods",
-            title3: "I Phone 11",
-            title4: "I Phone 13 Pro",
-            price1: '210, 120',
-            price2: "1, 549,300",
-            price3: "7, 500,000",
-            price4: "5, 300, 250",
-            icon: <HeadphonesIcon/>
-        },
-
-    ];
-
-    return (
-          <section id="subnav">
+    return (<section className='subnav'>
+        <div className='wrapper'>
+            {data.map(categ => (
+                  <div className='nav' key={categ.id}>
+                      <p className='title'>{categ.title}</p>
+                      <span>|</span>
+                      <div className='dropdown'>
+                          <div className='itemwrap'>
+                              {categ.products.map(prod => (
+                                    <NavLink to={"/products" + "/" + `${prod.id}`} key={prod.id} className='item'>
+                                        <img src={prod.img} alt=""/>
+                                        <p className='name'>{prod.name}</p>
+                                        <p className='price'>{prod.price}</p>
+                                    </NavLink>
+                              ))}
+                              <NavLink className='iconwrap' style={{
+                                  border: '1px solid grey',
+                                  borderRadius: '100%',
+                                  width: '40px',
+                                  height: '40px'
+                              }} to={categ.title}>
+                                  <img src={Arrow} alt=""/>
+                              </NavLink>
+                          </div>
+                      </div>
+                  </div>
+            ))}
+        </div>
+    </section>
+          /*<section id="subnav">
               <div className="subnav-wrapper">
                   <ul className="items">
                       {data.map(item =>
@@ -164,6 +380,5 @@ export default function SubNav() {
                       </li>
                   </ul>
               </div>
-          </section>
-    )
+          </section>*/)
 }

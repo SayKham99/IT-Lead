@@ -9,6 +9,7 @@ import "swiper/css/free-mode";
 import "swiper/css/navigation";
 import "swiper/css/thumbs";
 import {useGetProductQuery} from "../../Redux";
+import Loader from "../Loader/Loader";
 
 
 export default function SingleItem({match}) {
@@ -16,8 +17,8 @@ export default function SingleItem({match}) {
     const {data = [], isLoading, isError} = useGetProductQuery(postID)
 
     const [thumbsSwiper, setThumbsSwiper] = useState(null);
-    if (isLoading) return <h1 style={{color: "green"}}>Loading</h1>
-    if (isError) return <h1 style={{color: "red"}}>Error</h1>
+    if (isError) return <h1 style={{color: "green"}}>Loading</h1>
+    if (isLoading) return <div><Loader/></div>
     return (
           <section id="single-item">
               <div className="single-wrapper">
@@ -25,7 +26,7 @@ export default function SingleItem({match}) {
                       <Link to="/">
                           <HomeIcon className="home-icon"/>
                       </Link>
-                      <p>{postID}</p>
+                      <p>{data.title}</p>
                   </div>
                   <div className="item-body">
                       <div className="item-title">

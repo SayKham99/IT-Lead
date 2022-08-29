@@ -9,13 +9,19 @@ import SmartHome from '../../../assets/smart-home.jpg'
 import SmartPhone from '../../../assets/smartphones.jpg'
 import {NavLink} from 'react-router-dom';
 
+
+let video = <iframe width="560" height="315" src="https://www.youtube.com/embed/Jk7Ff9s2nkw"
+                    title="YouTube video player" frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen></iframe>
+
 const category = [{id: 1, name: 'Смартфоны', url: SmartPhone}, {
     id: 2, name: 'Аксессуары', url: Accesories
 }, {id: 3, name: 'Умный дом', url: SmartHome}, {
     id: 4, name: 'Аудио', url: Audio
 }, {id: 5, name: 'Внешний аккумулятор', url: Power}, {
     id: 6, name: 'В авто', url: Auto
-}, {id: 7, name: 'Все товары', url: All}]
+}, {id: 7, name: 'Все товары', url: All}];
 
 function Category() {
     return (<section className='category'>
