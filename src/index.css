@@ -3,15 +3,24 @@
     margin: 0;
     padding:0;
     box-sizing: border-box;
+    outline: none;
+    transition: .5s ease-in;
 }
 body{
     font-family: 'Roboto', sans-serif;
+    overflow-x:hidden;
+    min-width: 320px;
+
+}
+body::-webkit-scrollbar{
+    width: 5px;
+    background-color: lightgray;
+}
+body::-webkit-scrollbar-thumb{
+    border-radius: 100px;
+    background-color: grey;
 }
 a{
     text-decoration: none;
-}
-.active{
-    background: black;
-    color: rgb(235, 120, 39);
 }
 
